@@ -54,7 +54,7 @@ var e2 &#61; driver.findElement({id:&#39;foo&#39;});
 function firstVisibleLink(driver) {
   var links &#61; driver.findElements(By.tagName(&#39;a&#39;));
   return webdriver.promise.filter(links, function(link) {
-    return links.isDisplayed();
+    return link.isDisplayed();
   }).then(function(visibleLinks) {
     return visibleLinks[0];
   });
